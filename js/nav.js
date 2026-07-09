@@ -13,7 +13,7 @@
             });
         }
         });
-    }, { threshold: 0.4, rootMargin: '-10% 0px -40% 0px' });
+    }, { threshold: [0, 0.25, 0.5, 0.75, 1], rootMargin: '-10% 0px -40% 0px' });
 
     sections.forEach(s => s && observer.observe(s));
 })();
