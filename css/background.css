@@ -1,0 +1,92 @@
+/* ================= BACKGROUND FX ================= */
+.bg-fx{
+    position:fixed;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    overflow:hidden;
+    background:var(--bg);
+}
+
+/* white "sun ray" beams, anchored to the top-right corner */
+.rays{
+    position:absolute;
+    top:-90vmax; right:-90vmax;
+    width:180vmax; height:180vmax;
+    background:
+    conic-gradient(from 0deg,
+        rgba(255,255,255,0) 0deg,
+        rgba(255,255,255,.10) 4deg,
+        rgba(255,255,255,0) 10deg,
+        rgba(255,255,255,0) 34deg,
+        rgba(255,255,255,.07) 40deg,
+        rgba(255,255,255,0) 46deg,
+        rgba(255,255,255,0) 70deg,
+        rgba(255,255,255,.09) 75deg,
+        rgba(255,255,255,0) 82deg,
+        rgba(255,255,255,0) 120deg,
+        rgba(255,255,255,.06) 126deg,
+        rgba(255,255,255,0) 133deg,
+        rgba(255,255,255,0) 180deg,
+        rgba(255,255,255,.10) 186deg,
+        rgba(255,255,255,0) 193deg,
+        rgba(255,255,255,0) 230deg,
+        rgba(255,255,255,.07) 236deg,
+        rgba(255,255,255,0) 242deg,
+        rgba(255,255,255,0) 280deg,
+        rgba(255,255,255,.08) 286deg,
+        rgba(255,255,255,0) 293deg,
+        rgba(255,255,255,0) 360deg
+    );
+    filter: blur(6px);
+    animation: spin 90s linear infinite;
+    opacity:.55;
+}
+.rays.rays-2{
+    top:-70vmax; right:-70vmax;
+    width:140vmax; height:140vmax;
+    animation: spin-rev 130s linear infinite;
+    opacity:.35;
+    filter: blur(10px);
+}
+@keyframes spin{ to{ transform:rotate(360deg); } }
+@keyframes spin-rev{ from{ transform:rotate(360deg);} to{ transform:rotate(0deg); } }
+
+/* pulsing glow, same top-right origin as the rays */
+.glow-core{
+    position:absolute;
+    top:-320px; right:-320px;
+    width:900px; height:900px;
+    background: radial-gradient(circle, rgba(255,255,255,.20) 0%, rgba(255,255,255,0) 65%);
+    animation: pulse 7s ease-in-out infinite;
+}
+@keyframes pulse{
+    0%,100%{ opacity:.6; transform:scale(1); }
+    50%{ opacity:1; transform:scale(1.08); }
+}
+
+/* film-grain texture for the glitch feel */
+.grain{
+    position:absolute; inset:-10%;
+    opacity:.05;
+    mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    background-size:180px 180px;
+    animation: grain-shift 1s steps(2) infinite;
+}
+@keyframes grain-shift{
+    0%{ transform:translate(0,0); }
+    50%{ transform:translate(-2%,1%); }
+    100%{ transform:translate(1%,-1%); }
+}
+
+.scanlines{
+    position:absolute; inset:0;
+    background:repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,.025) 0px,
+    rgba(255,255,255,.025) 1px,
+    rgba(0,0,0,0) 2px,
+    rgba(0,0,0,0) 4px
+    );
+}

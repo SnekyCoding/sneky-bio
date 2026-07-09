@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sneky BIO</title>
+<link rel="icon" href="images/ava.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/background.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+
+    <div class="bg-fx">
+        <div class="rays"></div>
+        <div class="rays rays-2"></div>
+        <div class="glow-core"></div>
+        <div class="scanlines"></div>
+        <div class="grain"></div>
+    </div>
+
+    <!-- desktop nav -->
+    <nav class="nav" id="navDesktop">
+        <a href="#home" class="active" data-key="home">Главная</a>
+        <a href="#about" data-key="about">Обо мне</a>
+        <a href="#work" data-key="work">Работы</a>
+        <a href="#contact" data-key="contact">Контакты</a>
+    </nav>
+
+    <!-- mobile bottom dock -->
+    <nav class="nav-mobile" id="navMobile">
+        <a href="#home" class="active" data-key="home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9h14v-9"/></svg>
+            Главная
+        </a>
+        <a href="#about" data-key="about">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.5-4 5-5.5 7-5.5S18.5 16 20 20"/></svg>
+            Обо мне
+        </a>
+        <a href="#work" data-key="work">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg>
+            Работы
+        </a>
+        <a href="#contact" data-key="contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="m4 6.5 8 6.5 8-6.5"/></svg>
+            Контакт
+        </a>
+    </nav>
+
+    <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+        <div class="wrap">
+        <div class="hero-tag"># bio<span>.py</span> — запущен</div>
+
+        <div class="greet-wrap">
+            <span class="greet" id="greetText">Привет, путник</span>
+        </div>
+
+        <h1 class="hero-name"><span class="outline">SNEKY</span></h1>
+
+        <p class="hero-sub">
+            Разработчик Telegram-ботов на Python.
+            Собираю логику, обрабатываю команды, подключаю API. Стараюсь, чтобы бот работал стабильно, а код был понятным и не рассыпался при росте нагрузки
+        </p>
+
+        <div class="hero-cta">
+            <a href="#work" class="btn">Смотреть работы</a>
+            <a href="#contact" class="btn ghost">Написать</a>
+        </div>
+        </div>
+
+        <div class="scroll-cue"><div class="line"></div>scroll</div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about">
+        <div class="wrap">
+        <div class="eyebrow">01 — обо мне</div>
+        <div class="about-grid">
+            <div class="avatar-frame reveal">
+            <img src="images/avatar.jpg" alt="Sneky" onerror="this.closest('.avatar-frame').classList.add('img-missing')">
+            </div>
+            <div class="about-text reveal">
+            <h2 class="section-title">Коротко о процессе</h2>
+            <p>
+                Меня зовут <strong>Даниил</strong>, мне 18, я студент. Предлагаю ботов «под ключ» от <strong>1000₽</strong>
+            </p>
+            <p>
+                <strong>Что значит «под ключ»?</strong>
+            </p>
+            <p>
+                Код лежит на моём сервере, вы получаете готовое решение без необходимости лезть в консоль.
+                По вашему запросу могу скинуть исходный код.
+                Поддержка для бота (включает оплату хостинга) осуществляется отдельной платой раз в месяц в зависимости от сложности проекта и нагрузки.
+            </p>
+            <div class="fact-row">
+                <div class="fact"><div class="num">/aiogram</div><div class="label">код и логика</div></div>
+                <div class="fact"><div class="num">/postgresql</div><div class="label">база данных</div></div>
+                <div class="fact"><div class="num">/docker</div><div class="label">хостинг</div></div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- ================= WORK ================= -->
+    <section id="work">
+        <div class="wrap">
+        <div class="eyebrow">02 — работы</div>
+        <h2 class="section-title">Избранные проекты</h2>
+
+        <div class="work-grid">
+
+            <a class="card reveal" href="https://t.me/sneky_projects/320" target="_blank" rel="noopener">
+            <div class="thumb">
+                <!-- Замени images/project-1.png на свой файл -->
+                <img src="images/acceess_bot.jpg" alt="Проект 1" onerror="this.closest('.card').classList.add('img-missing')">
+            </div>
+            <div class="card-body">
+                <div class="tag">TG Bot</div>
+                <h3>Access Bot</h3>
+                <p>Телеграм бот в котором нужно выбрать тариф и оплатить чек, чтобы получить единоразовые ссылки для доступа к приватным чатам. По истечении времени, которое указано в тарифе пользователь будет исключен из чатов автоматически</p>
+            </div>
+            </a>
+
+
+            <a class="card reveal" href="https://t.me/sneky_projects/310" target="_blank" rel="noopener">
+            <div class="thumb">
+                <img src="images/bunny_gpt.jpg" alt="Проект 2" onerror="this.closest('.card').classList.add('img-missing')">
+            </div>
+            <div class="card-body">
+                <div class="tag">TG Bot</div>
+                <h3>Bunny GPT</h3>
+                <p>Телеграм бот в котором можно генерировать текст и картинки бесплатно, устанавливать свои гиф в главное меню, есть профиль каждого пользователя и платная подписка, оплата в крипте</p>
+            </div>
+            </a>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact">
+        <div class="wrap">
+        <div class="eyebrow">03 — связь</div>
+        <div class="contact-box reveal">
+            <h2>Есть проект?<br>Давайте обсудим!</h2>
+            <p>По всем вопросам — пишите в телеграм или на почту</p>
+            <div class="social-row">
+            <a target="_top" class="social-pill" href="mailto:esenin2211@gmail.com">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 6.5 8 6.5 8-6.5"/></svg>
+                Почта
+            </a>
+            <a class="social-pill" href="https://t.me/sneky" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 5 3 12l6 2 2 6 3-4 5 2z"/></svg>
+                Telegram
+            </a>
+            <a class="social-pill" href="https://github.com/SnekyCoding" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 8h3v8H8zM8 8v0"/><path d="M13 16v-4.2c0-1.2.9-2 2-2 1.1 0 1.8.8 1.8 2V16"/><circle cx="9.5" cy="6" r="1"/></svg>
+                GitHub
+            </a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+        <p>© SNEKY — 2026 # все права соблюдены</p>
+        </div>
+    </footer>
+    </main>
+
+<script src="js/greeting.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/reveal.js"></script>
+</body>
+</html>
