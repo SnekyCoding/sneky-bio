@@ -85,7 +85,8 @@
         <div class="eyebrow">01 — обо мне</div>
         <div class="about-grid">
             <div class="avatar-frame reveal">
-            <img src="images/avatar.jpg" alt="Sneky" onerror="this.closest('.avatar-frame').classList.add('img-missing')">
+            <!-- <img src="images/avatar.jpg" alt="Sneky" onerror="this.closest('.avatar-frame').classList.add('img-missing')"> -->
+            <video class="avatar-media" src="images/avatar.mp4" autoplay muted loop playsinline onerror="this.closest('.avatar-frame').classList.add('img-missing')"></video>
             </div>
             <div class="about-text reveal">
             <h2 class="section-title">Коротко о процессе</h2>
@@ -146,6 +147,7 @@
         </div>
     </section>
 
+    <section></section>
     <!-- ================= CONTACT ================= -->
     <section id="contact">
         <div class="wrap">
@@ -181,5 +183,6 @@
 <script src="js/greeting.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/reveal.js"></script>
+<script src="js/color-reveal.js"></script>
 </body>
 </html>

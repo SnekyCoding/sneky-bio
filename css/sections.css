@@ -21,13 +21,17 @@
     box-shadow:0 0 40px rgba(255,255,255,.18);
     border-color:var(--line-strong);
 }
-.avatar-frame img{
+.avatar-frame img,
+.avatar-frame video{
     width:100%; height:100%; object-fit:cover;
     display:block;
     filter:grayscale(1) contrast(1.08);
     transition: filter .6s ease;
 }
-.avatar-frame:hover img{
+.avatar-frame:hover img,
+.avatar-frame:hover video,
+.avatar-frame.in-view img,
+.avatar-frame.in-view video{
     filter:grayscale(0) contrast(1.05);
 }
 .avatar-frame::after{
@@ -107,6 +111,9 @@
     transform:scale(1.05);
     filter:grayscale(.2) contrast(1.15);
 }
+.card.in-view .thumb img{
+    filter:grayscale(.2) contrast(1.15);
+}
 .card .thumb::after{
     content:"";
     position:absolute; inset:0;
@@ -178,7 +185,7 @@
     transform:translateY(-2px);
 }
 .social-pill svg{ width:15px; height:15px; }
-
+ 
 footer{
     padding:38px 0 130px;
     text-align:center;
