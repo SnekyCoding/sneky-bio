@@ -4,185 +4,270 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Sneky BIO</title>
-<link rel="icon" href="images/ava.png">
+<meta name="description" content="Даниил (Sneky), Python-разработчик. Telegram-боты и сайты под ключ.">
+<link rel="icon" href="images/ava-128.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/background.css">
-<link rel="stylesheet" href="css/nav.css">
-<link rel="stylesheet" href="css/hero.css">
-<link rel="stylesheet" href="css/sections.css">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-    <div class="bg-fx">
-        <div class="rays"></div>
-        <div class="rays rays-2"></div>
-        <div class="glow-core"></div>
-        <div class="scanlines"></div>
-        <div class="grain"></div>
+<div class="bg-fx" aria-hidden="true">
+  <div class="rays"></div>
+  <div class="grain"></div>
+</div>
+
+<nav class="nav" aria-label="Разделы">
+  <a href="#start" data-key="start">/start</a>
+  <a href="#services" data-key="services">/services</a>
+  <a href="#admin" data-key="admin">/admin</a>
+  <a href="#projects" data-key="projects">/projects</a>
+  <a href="#contact" data-key="contact">/contact</a>
+</nav>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="start">
+    <div class="wrap hero-grid">
+      <div class="hero-head">
+        <p class="hero-who">Даниил, Python-разработчик</p>
+        <h1 class="hero-name" data-text="SNEKY">SNEKY</h1>
+      </div>
+      <div class="hero-text">
+        <p class="hero-sub">Делаю Telegram-ботов и сайты под ключ. Пишу логику, поднимаю базу данных, подключаю оплату и запускаю всё на своём сервере. Вам остаётся пользоваться.</p>
+        <div class="hero-cta">
+          <a class="btn" href="https://t.me/sneky" target="_blank" rel="noopener">Обсудить проект</a>
+          <a class="btn ghost" href="#projects">Смотреть работы</a>
+        </div>
+      </div>
+
+      <!-- живой бот-демо -->
+      <div class="tg" id="heroBot">
+        <div class="tg-head">
+          <img src="images/ava-128.png" alt="" width="40" height="40">
+          <div>
+            <div class="tg-title">Sneky Bot</div>
+            <div class="tg-status">бот</div>
+          </div>
+        </div>
+        <div class="tg-feed" id="heroFeed" aria-live="polite">
+          <div class="msg out">/start</div>
+          <div class="msg in">
+            Привет, путник 👋 Я Даниил. Делаю ботов и сайты под ключ. Что показать?
+          </div>
+          <div class="kb">
+            <button type="button" data-reply="bots">🤖 Боты</button>
+            <button type="button" data-reply="sites">🛒 Сайты</button>
+            <button type="button" data-reply="projects">🗂 Проекты</button>
+            <button type="button" data-reply="contact">💬 Написать</button>
+          </div>
+        </div>
+        <div class="tg-input">Нажмите кнопку в сообщении</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services">
+    <div class="wrap">
+      <p class="cmd">/services</p>
+      <h2 class="h2">Что я делаю</h2>
+
+      <div class="services">
+        <article class="service">
+          <div class="service-top">
+            <h3>Telegram-боты</h3>
+            <p class="price">от 1 000 ₽</p>
+          </div>
+          <p>Продажа доступа в закрытые каналы, подписки, AI-боты, рассылки, магазины в Telegram. Логику собираю под вашу задачу.</p>
+          <ul>
+            <li>готовая админ-панель в каждом боте</li>
+            <li>оплата через ЮKassa или CryptoBot</li>
+            <li>база данных PostgreSQL</li>
+          </ul>
+        </article>
+
+        <article class="service">
+          <div class="service-top">
+            <h3>Сайты и магазины</h3>
+            <p class="price">по задаче</p>
+          </div>
+          <p>Интернет-магазины и сайты-визитки: каталог, корзина, личный кабинет, приём оплаты. Пример работы — SnekyStore ниже.</p>
+          <ul>
+            <li>каталог с фильтрами по брендам и категориям</li>
+            <li>корзина и онлайн-оплата</li>
+            <li>адаптив под телефон</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="turnkey">
+        <h3>Что значит «под ключ»</h3>
+        <dl>
+          <div>
+            <dt>Код и хостинг на мне</dt>
+            <dd>Проект работает на моём сервере. Вы получаете готовое решение без необходимости лезть в консоль.</dd>
+          </div>
+          <div>
+            <dt>Исходники по запросу</dt>
+            <dd>Если нужен код, передам его целиком.</dd>
+          </div>
+          <div>
+            <dt>Поддержка помесячно</dt>
+            <dd>Оплачивается отдельно и включает хостинг. Сумма зависит от сложности проекта и нагрузки.</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ADMIN ============ -->
+  <section id="admin">
+    <div class="wrap admin-grid">
+      <div class="admin-text">
+        <p class="cmd">/admin</p>
+        <h2 class="h2">Админ-панель в каждом боте</h2>
+        <p>Управлять ботом можно прямо в Telegram, без отдельного сайта и без программиста под рукой.</p>
+        <p>Справа копия админки из моих ботов. Кнопки работают как в Telegram: нажмите любую и пройдите по меню.</p>
+        <p class="note">Цифры и ID в примере выдуманы.</p>
+      </div>
+
+      <div class="tg tg-admin" id="adminBot">
+        <div class="tg-head">
+          <img src="images/ava-128.png" alt="" width="40" height="40">
+          <div>
+            <div class="tg-title">Ваш бот</div>
+            <div class="tg-status">бот</div>
+          </div>
+        </div>
+        <div class="tg-feed" id="adminFeed">
+          <div class="msg out">/admin</div>
+          <div class="bot-msg" id="adminMsg" aria-live="polite">
+            <div class="msg in" id="adminText">Привет, админ! Что будем делать? 😐<br><br>Чтобы узнать ID пользователя через его username, воспользуйся ботом @username_to_id_bot<time>0:10</time></div>
+            <div class="kb-inline" id="adminKb">
+              <div class="kb-row"><button type="button" data-go="stats">Статистика 🔢</button><button type="button" data-go="mail">Рассылка 📢</button></div>
+              <div class="kb-row"><button type="button" data-go="ban">Забанить ❌</button><button type="button" data-go="unban">Разбанить ✅</button></div>
+              <div class="kb-row"><button type="button" data-go="info">Инфа 🤠</button><button type="button" data-go="write">Написать по ID ✍️</button></div>
+              <div class="kb-row"><button type="button" data-go="subs">Изменить обязательные подписки 💰</button></div>
+              <div class="kb-row"><button type="button" data-go="admins">Управление админами 👨‍💻</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="tg-compose" aria-hidden="true"><span class="menu-pill">Меню</span><span>Сообщение...</span></div>
+        <div class="reply-kb"><button type="button" data-go="menu">◀️ Выйти в меню</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="projects-head">
+        <div>
+          <p class="cmd">/projects</p>
+          <h2 class="h2">Проекты</h2>
+        </div>
+        <div class="car-nav">
+          <button type="button" class="car-btn" id="carPrev" aria-label="Предыдущий проект">←</button>
+          <button type="button" class="car-btn" id="carNext" aria-label="Следующий проект">→</button>
+        </div>
+      </div>
     </div>
 
-    <!-- desktop nav -->
-    <nav class="nav" id="navDesktop">
-        <a href="#home" class="active" data-key="home">Главная</a>
-        <a href="#about" data-key="about">Обо мне</a>
-        <a href="#work" data-key="work">Работы</a>
-        <a href="#contact" data-key="contact">Контакты</a>
-    </nav>
+    <div class="carousel" id="carousel" tabindex="0" aria-label="Проекты, листайте вбок">
+      <article class="slide featured" data-project="shop">
+        <button type="button" class="slide-open" aria-label="Подробнее о SnekyStore">
+          <div class="slide-media browserish">
+            <div class="browser-bar"><i></i><i></i><i></i><span>snekyshop.duckdns.org</span></div>
+            <img src="images/shop-catalog.webp" alt="Каталог SnekyStore" width="1400" height="734" loading="lazy">
+          </div>
+          <div class="slide-body">
+            <p class="kind">Сайт на Django</p>
+            <h3>SnekyStore</h3>
+            <p>Интернет-магазин одежды и обуви: каталог с фильтрами, корзина, аккаунты, купоны и оплата через ЮKassa.</p>
+            <span class="more">Подробнее</span>
+          </div>
+        </button>
+      </article>
 
-    <!-- mobile bottom dock -->
-    <nav class="nav-mobile" id="navMobile">
-        <a href="#home" class="active" data-key="home">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9h14v-9"/></svg>
-            Главная
-        </a>
-        <a href="#about" data-key="about">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.5-4 5-5.5 7-5.5S18.5 16 20 20"/></svg>
-            Обо мне
-        </a>
-        <a href="#work" data-key="work">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg>
-            Работы
-        </a>
-        <a href="#contact" data-key="contact">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="m4 6.5 8 6.5 8-6.5"/></svg>
-            Контакт
-        </a>
-    </nav>
+      <article class="slide" data-project="access">
+        <button type="button" class="slide-open" aria-label="Подробнее об Access Bot">
+          <div class="slide-media"><img src="images/acceess_bot-800.webp" alt="Обложка Access Bot" width="800" height="800" loading="lazy"></div>
+          <div class="slide-body">
+            <p class="kind">Telegram-бот на Aiogram 3</p>
+            <h3>Access Bot</h3>
+            <p>Продажа доступа в приватные каналы по тарифам. Когда срок заканчивается, бот сам исключает пользователя.</p>
+            <span class="more">Подробнее</span>
+          </div>
+        </button>
+      </article>
 
-    <main>
-    <!-- ================= HERO ================= -->
-    <section class="hero" id="home">
-        <div class="wrap">
-        <div class="hero-tag"># bio<span>.py</span> — запущен</div>
+      <article class="slide" data-project="bunny">
+        <button type="button" class="slide-open" aria-label="Подробнее о Bunny GPT">
+          <div class="slide-media"><img src="images/bunny_gpt-800.webp" alt="Логотип Bunny GPT" width="800" height="800" loading="lazy"></div>
+          <div class="slide-body">
+            <p class="kind">Telegram-бот на Aiogram 3</p>
+            <h3>Bunny GPT</h3>
+            <p>Бесплатная генерация текста и картинок, роли, профиль, своя GIF в меню и платная подписка в крипте.</p>
+            <span class="more">Подробнее</span>
+          </div>
+        </button>
+      </article>
+    </div>
 
-        <div class="greet-wrap">
-            <span class="greet" id="greetText">Привет, путник</span>
+    <div class="wrap"><div class="car-dots" id="carDots" aria-hidden="true"></div></div>
+  </section>
+
+  <!-- подробности проекта -->
+  <dialog class="pmodal" id="pmodal" aria-labelledby="pmTitle">
+    <div class="pm-inner">
+      <button type="button" class="pm-close" id="pmClose" aria-label="Закрыть">✕</button>
+      <div class="pm-gallery">
+        <div class="pm-stage">
+          <div class="pm-track" id="pmTrack" tabindex="0" aria-label="Скриншоты, листайте вбок"></div>
+          <button type="button" class="pm-arrow prev" id="pmPrev" aria-label="Предыдущее фото">←</button>
+          <button type="button" class="pm-arrow next" id="pmNext" aria-label="Следующее фото">→</button>
+          <span class="pm-count" id="pmCount"></span>
         </div>
+        <p class="pm-cap" id="pmCap"></p>
+        <div class="pm-thumbs" id="pmThumbs"></div>
+      </div>
+      <div class="pm-info">
+        <p class="kind" id="pmKind"></p>
+        <h3 id="pmTitle"></h3>
+        <p id="pmLead"></p>
+        <div id="pmFeatures"></div>
+        <h4>Стек</h4>
+        <ul class="stack" id="pmStack"></ul>
+        <div class="project-links" id="pmLinks"></div>
+      </div>
+    </div>
+  </dialog>
 
-        <h1 class="hero-name"><span class="outline">SNEKY</span></h1>
-
-        <p class="hero-sub">
-            Разработчик Telegram-ботов на Python.
-            Собираю логику, обрабатываю команды, подключаю API. Стараюсь, чтобы бот работал стабильно, а код был понятным и не рассыпался при росте нагрузки
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="wrap contact">
+      <p class="cmd">/contact</p>
+      <h2 class="contact-title">Есть задача?<br>Напишите мне</h2>
+      <a class="contact-handle" href="https://t.me/sneky" target="_blank" rel="noopener">@sneky</a>
+      <div class="contact-other">
+        <p>Почта <span class="select">esenin2211@gmail.com</span></p>
+        <p>
+          <a href="https://t.me/sneky_bio" target="_blank" rel="noopener">Канал</a>
+          <a href="https://t.me/sneky_projects" target="_blank" rel="noopener">Все проекты</a>
+          <a href="https://github.com/SnekyCoding" target="_blank" rel="noopener">GitHub</a>
         </p>
+      </div>
+    </div>
+  </section>
 
-        <div class="hero-cta">
-            <a href="#work" class="btn">Смотреть работы</a>
-            <a href="#contact" class="btn ghost">Написать</a>
-        </div>
-        </div>
+  <footer>
+    <div class="wrap">© SNEKY, 2026</div>
+  </footer>
+</main>
 
-        <div class="scroll-cue"><div class="line"></div>scroll</div>
-    </section>
-
-    <!-- ================= ABOUT ================= -->
-    <section id="about">
-        <div class="wrap">
-        <div class="eyebrow">01 — обо мне</div>
-        <div class="about-grid">
-            <div class="avatar-frame reveal">
-            <!-- <img src="images/avatar.jpg" alt="Sneky" onerror="this.closest('.avatar-frame').classList.add('img-missing')"> -->
-            <video class="avatar-media" src="images/avatar.MP4" autoplay muted loop playsinline onerror="this.closest('.avatar-frame').classList.add('img-missing')"></video>
-            </div>
-            <div class="about-text reveal">
-            <h2 class="section-title">Коротко о процессе</h2>
-            <p>
-                Меня зовут <strong>Даниил</strong>, мне 18, я студент. Предлагаю ботов «под ключ» от <strong>1000₽</strong>
-            </p>
-            <p>
-                <strong>Что значит «под ключ»?</strong>
-            </p>
-            <p>
-                Код лежит на моём сервере, вы получаете готовое решение без необходимости лезть в консоль.
-                По вашему запросу могу скинуть исходный код.
-                Поддержка для бота (включает оплату хостинга) осуществляется отдельной платой раз в месяц в зависимости от сложности проекта и нагрузки.
-            </p>
-            <div class="fact-row">
-                <div class="fact"><div class="num">/aiogram</div><div class="label">код и логика</div></div>
-                <div class="fact"><div class="num">/postgresql</div><div class="label">база данных</div></div>
-                <div class="fact"><div class="num">/docker</div><div class="label">хостинг</div></div>
-            </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- ================= WORK ================= -->
-    <section id="work">
-        <div class="wrap">
-        <div class="eyebrow">02 — работы</div>
-        <h2 class="section-title">Избранные проекты</h2>
-
-        <div class="work-grid">
-
-            <a class="card reveal" href="https://t.me/sneky_projects/320" target="_blank" rel="noopener">
-            <div class="thumb">
-                <!-- Замени images/project-1.png на свой файл -->
-                <img src="images/acceess_bot.jpg" alt="Проект 1" onerror="this.closest('.card').classList.add('img-missing')">
-            </div>
-            <div class="card-body">
-                <div class="tag">TG Bot</div>
-                <h3>Access Bot</h3>
-                <p>Телеграм бот в котором нужно выбрать тариф и оплатить чек, чтобы получить единоразовые ссылки для доступа к приватным чатам. По истечении времени, которое указано в тарифе пользователь будет исключен из чатов автоматически</p>
-            </div>
-            </a>
-
-
-            <a class="card reveal" href="https://t.me/sneky_projects/310" target="_blank" rel="noopener">
-            <div class="thumb">
-                <img src="images/bunny_gpt.jpg" alt="Проект 2" onerror="this.closest('.card').classList.add('img-missing')">
-            </div>
-            <div class="card-body">
-                <div class="tag">TG Bot</div>
-                <h3>Bunny GPT</h3>
-                <p>Телеграм бот в котором можно генерировать текст и картинки бесплатно, устанавливать свои гиф в главное меню, есть профиль каждого пользователя и платная подписка, оплата в крипте</p>
-            </div>
-            </a>
-
-        </div>
-        </div>
-    </section>
-
-    <section></section>
-    <!-- ================= CONTACT ================= -->
-    <section id="contact">
-        <div class="wrap">
-        <div class="eyebrow">03 — связь</div>
-        <div class="contact-box reveal">
-            <h2>Есть проект?<br>Давайте обсудим!</h2>
-            <p>По всем вопросам — пишите в телеграм или на почту</p>
-            <div class="social-row">
-            <a target="_top" class="social-pill" href="mailto:esenin2211@gmail.com">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 6.5 8 6.5 8-6.5"/></svg>
-                Почта
-            </a>
-            <a class="social-pill" href="https://t.me/sneky" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 5 3 12l6 2 2 6 3-4 5 2z"/></svg>
-                Telegram
-            </a>
-            <a class="social-pill" href="https://github.com/SnekyCoding" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 8h3v8H8zM8 8v0"/><path d="M13 16v-4.2c0-1.2.9-2 2-2 1.1 0 1.8.8 1.8 2V16"/><circle cx="9.5" cy="6" r="1"/></svg>
-                GitHub
-            </a>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="wrap">
-        <p>© SNEKY — 2026 # все права соблюдены</p>
-        </div>
-    </footer>
-    </main>
-
-<script src="js/greeting.js"></script>
-<script src="js/nav.js"></script>
-<script src="js/reveal.js"></script>
-<script src="js/color-reveal.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
